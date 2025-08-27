@@ -14,7 +14,6 @@ public class Customer
     public void RequestOverdraft(Account account, decimal limit)
     {
         account.RequestOverdraft(limit);
-        Console.WriteLine($"{Name} requested overdraft of {limit} on account at {account.Branch.Name}");
     }
 
     public void ReceiveStatement(Account account)

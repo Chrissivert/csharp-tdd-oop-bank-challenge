@@ -11,12 +11,10 @@ public class Branch
     public void ApproveOverdraft(Account account)
     {
         account.ApproveOverdraft();
-        Console.WriteLine($"Overdraft approved for account at {Name}");
     }
 
     public void RejectOverdraft(Account account)
     {
         account.RejectOverdraft();
-        Console.WriteLine($"Overdraft rejected for account at {Name}");
     }
 }
