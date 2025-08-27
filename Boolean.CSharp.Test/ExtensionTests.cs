@@ -26,5 +26,14 @@ namespace Boolean.CSharp.Test
         {
 
         }
+
+        [Test]
+        public void Deposit_IncreasesBalance()
+        {
+            var account = new CurrentAccount();
+            account.Deposit(100);
+            Assert.AreEqual(100, account.Balance);
+        }
+
     }
 }
