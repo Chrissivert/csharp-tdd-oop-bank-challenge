@@ -75,15 +75,22 @@ namespace Boolean.CSharp.Test
         public void Customer_CanOpenAccounts()
         {
             var customer = new Customer { Name = "Alice" };
+            var branch = new Branch("Downtown");   // 🆕 create a branch
             var current = new CurrentAccount();
             var saving = new SavingAccount();
 
-            customer.OpenAccount(current);
-            customer.OpenAccount(saving);
+            customer.OpenAccount(current, branch); // 🆕 now pass branch
+            customer.OpenAccount(saving, branch);
 
             Assert.AreEqual(2, customer.Accounts.Count);
             Assert.Contains(current, customer.Accounts);
             Assert.Contains(saving, customer.Accounts);
+
+            // 🆕 optional extra check: branch should also know about accounts
+            Assert.AreEqual(2, branch.Accounts.Count);
+            Assert.Contains(current, branch.Accounts);
+            Assert.Contains(saving, branch.Accounts);
         }
+
     }
 }
