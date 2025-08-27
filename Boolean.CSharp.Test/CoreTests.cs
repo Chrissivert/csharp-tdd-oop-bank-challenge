@@ -66,7 +66,7 @@ namespace Boolean.CSharp.Test
             account.Deposit(200);
             account.Withdraw(50);
 
-            var statement = account.GenerateStatement();
+            var statement = account.GenerateBankStatement();
             Assert.AreEqual(2, statement.Transactions.Count);
             Assert.AreEqual(150, statement.Transactions.Last().BalanceAfterTransaction);
         }
