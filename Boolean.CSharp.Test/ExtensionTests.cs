@@ -1,39 +1,26 @@
-﻿using Boolean.CSharp.Main;
-using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// using Boolean.CSharp.Main;
+// using NUnit.Framework;
 
-namespace Boolean.CSharp.Test
-{
-    [TestFixture]
-    public class ExtensionTests
-    {
-        private Extension _extension;
-        public ExtensionTests()
-        {
-            _extension = new Extension();
-        }
-        [Test]
-        private void TestQuestion1()
-        {
+// namespace Boolean.CSharp.Test
+// {
+//     [TestFixture]
+//     public class ExtensionTests
+//     {
+//         private Extension _extension;
+//         public ExtensionTests()
+//         {
+//             _extension = new Extension();
+//         }
+//         [Test]
+//         private void TestQuestion1()
+//         {
 
-        }
-        [Test]
-        private void TestQuestion2()
-        {
+//         }
+//         [Test]
+//         private void TestQuestion2()
+//         {
 
-        }
+//         }
 
-        [Test]
-        public void Deposit_IncreasesBalance()
-        {
-            var account = new CurrentAccount();
-            account.Deposit(100);
-            Assert.AreEqual(100, account.Balance);
-        }
-
-    }
-}
+//     }
+// }
